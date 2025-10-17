@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fringe Hair Salon</title>
+  <style>
+    body {
+      font-family: 'Reenie Beanie', cursive;
+      margin: 0;
+      padding: 0;
+      background-color: #f6d1c1; /* Plain rose gold */
+      color: #3e3e3e;
+      background-attachment: fixed;
+    }
+
+    img.banner {
+      width: 100%;
+      height: auto; /* Makes the banner responsive */
+      display: block;
+    }
+
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .tab-buttons button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #d4afad;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .tab-buttons button:hover {
+      background-color: #b88c8a;
+    }
+
+    .tab-section {
+      display: none;
+      padding: 20px;
+      color: white;
+    }
+
+    .tab-section img {
+      max-width: 100%;
+      margin: 10px 0;
+    }
+
+    h1, h2, h3, p {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="Banner.jpg" alt="Website Banner" class="banner">
+
+  <div class="tab-buttons">
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('photos')">Photos</button>
+    <button onclick="showSection('price-list')">Price List</button>
+    <button onclick="showSection('contact')">Contact</button>
+    <button onclick="showSection('map')">Map</button>
+  </div>
+<div id="about" class="tab-section">
+  <div style="text-align: center;">
+    <h2>Welcome to Fringe – Where beauty begins at the root!</h2>
+    <p>
+      Nestled in the heart of Heywood and established in 2014, Fringe is a boutique hair salon owned and run by Lucy Goulding, whose passion for precision and creativity shines through every cut, colour, and consultation. With a focus on warm hospitality and timeless style, Fringe offers a personalised experience that celebrates your individuality. Whether you're looking for a bold transformation or a subtle refresh, Lucy brings expertise, care, and a touch of magic to every appointment.
+    </p>
+  </div>
+</div>
+  <div id="photos" class="tab-section">
+    <img src="Salon1.jpg" alt="Salon Interior 1">
+    <img src="Salon2.jpg" alt="Salon Interior 2">
+    <img src="Salon3.jpg" alt="Salon Interior 3">
+    <img src="Salon4.jpg" alt="Salon Interior 4">
+  </div>
+
+  <div id="price-list" class="tab-section">
+  <div style="text-align: center;">
+    <img src="Pricelist.jpg" alt="Price List">
+  </div>
+</div>
+
+  <div id="contact" class="tab-section">
+  <div style="text-align: center;">
+    <h2>Fringe Hair Salon</h2>
+    <p>58 Manchester Street<br>Heywood<br>OL10 1DL</p>
+    <h3>Telephone:<br>07463 371038</h3>
+  </div>
+</div>
+
+  <div id="map" class="tab-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2368.1092830149823!2d-2.2163226230312434!3d53.591511672361484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bbbac04ada833%3A0x681505a0135f1e63!2sFringe%20hair%20salon!5e0!3m2!1sen!2suk!4v1760630128082!5m2!1sen!2suk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.tab-section').forEach(function(section) {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+
+    window.onload = function() {
+      showSection('about');
+    };
+  </script>
+
+</body>
+</html>
