@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>
+   Fringe Hair Salon
+</title>
+</head>
+<body>
+<p>Beauty, rooted in you</p>
+</body>
+</html>
